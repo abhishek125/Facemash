@@ -240,7 +240,7 @@
 			<artifactId>tomcat7-maven-plugin</artifactId>
 			<version>2.2</version>
 			<configuration>
-				<path>/Email</path>
+				<path>/facemash</path>
 			</configuration>
 		  </plugin>
 		  <plugin>
