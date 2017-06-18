@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/fb" />
+		<property name="username" value="root" />
+		<property name="password" value="123" />
+	</bean>
+
+	<bean id="securityConfig" class="com.abhi.app.config.SecurityConfig">
+	</bean>
+	
+	<bean id="authProvider"
+class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+<property name="userDetailsService" ref="myUserDetailsService" />
+<property name="passwordEncoder" ref="encoder" />
+  </bean>
+
+  <bean id="encoder"
+class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+
+
+	
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="myDataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/newdb?useSSL=false" />
+		<property name="username" value="root" />
+		<property name="password" value="123" />
+	</bean>
+
+	
+	<bean id="myUserDetailsService" class="com.abhi.app.service.MyUserDetailsService"></bean>
+	<bean id="utils" class="com.abhi.app.service.Utils"></bean>
+	<bean id="profileDaoService" class="com.abhi.app.service.ProfileDaoService"></bean>
+	<bean id="productDaoService" class="com.abhi.app.service.ProductDaoService"></bean>
+	<bean id="userSearchService" class="com.abhi.app.service.UserSearchService"></bean>
+	<bean id="friendDaoService" class="com.abhi.app.service.FriendDaoService"></bean>
+	<bean id="infoDaoService" class="com.abhi.app.service.InfoDaoService"></bean>
+	<bean id="blockDaoService" class="com.abhi.app.service.BlockDaoService"></bean>
+	<bean id="notificationDaoService" class="com.abhi.app.service.NotificationDaoService"></bean>
+	<bean id="activityDaoService" class="com.abhi.app.service.ActivityDaoService"></bean>
+	
+	<bean id="profileDao" class="com.abhi.app.Dao.ProfileDaoImpl"></bean>
+	<bean id="productDao" class="com.abhi.app.Dao.ProductDaoImpl"></bean>
+	<bean id="friendDao" class="com.abhi.app.Dao.FriendDaoImpl"></bean>
+	<bean id="infoDao" class="com.abhi.app.Dao.InfoDaoImpl"></bean>
+	<bean id="blockDao" class="com.abhi.app.Dao.BlockDaoImpl"></bean>
+	<bean id="notificationDao" class="com.abhi.app.Dao.NotificationDaoImpl"></bean>
+	<bean id="activityDao" class="com.abhi.app.Dao.ActivityDaoImpl"></bean>
+	
+	<!-- Hibernate 5 SessionFactory Bean definition -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="com.abhi.app.model"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.current_session_context_class">thread</prop>
+				<prop key="hibernate.show_sql">false</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
