@@ -25,7 +25,7 @@
 </head>
 
 <body>
- <div class="container" id="wrap">
+ <div id="wrap">
   <div class="row">
    <div class="col-md-6 col-md-offset-3">
     <form action="${pageContext.request.contextPath}/register" method="post" accept-charset="utf-8"
