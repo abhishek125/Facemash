@@ -32,7 +32,7 @@
 				<section class="login-form">
 					<form name="f" method="post" action="${pageContext.request.contextPath}/"
 						role="login">
-						<img src="http://i.imgur.com/RcmcLv4.png" class="img-responsive"
+						<img src="${pageContext.request.contextPath}/resources/images/company.png" class="img-responsive"
 							alt="" /> <input type="email" name="username"
 							placeholder="Email" required class="form-control input-lg" /> <input
 							type="password" name="password" class="form-control input-lg"

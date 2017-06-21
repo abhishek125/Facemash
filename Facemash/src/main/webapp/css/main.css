@@ -232,7 +232,7 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, F
 
 form[role=login] {
 	color: #5d5d5d;
-	background: #f2f2f2;
+	
 	padding: 26px;
 	border-radius: 10px;
 	-moz-border-radius: 10px;
