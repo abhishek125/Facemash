@@ -22,8 +22,10 @@ tomcat 7+,jdk 1.7+ ,mysql 5.6+
 then you also need to install maven.
 * Update src/main/resources/hibernate.xml with your MySQL credentials. Default username is "root" and password is "123".
 * Execute src/main/java/sql/fb.sql to create the database
-* Run "mvn package" from the root of application directory which creates a war file located under {projectname}/target/ then 
-copy & paste the war file to Tomcats "webapps" directory.
-* Visit http://localhost:8080/Facemash/
+* Run "mvn package" from the root of application directory which creates a war file located under {projectname}/target/ ,
+  copy & paste this war file to Tomcats "webapps" directory.
+* if you are using eclipse then skip previous step instead just import this project into eclipse and right click project -> run as -> run     on server.
+* Start tomcat and visit http://localhost:8080/Facemash/
+
 
 
