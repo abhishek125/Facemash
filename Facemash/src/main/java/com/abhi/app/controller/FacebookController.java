@@ -7,12 +7,15 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
+import javax.validation.ConstraintViolationException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -283,10 +286,25 @@ public class FacebookController {
 		return profileDaoService.getSuggestions(excludedSuggestions);
 	}
 
+	@ExceptionHandler(ConstraintViolationException.class)
+	public String exception(Model model)
+	{
+		model.addAttribute("errorMsg","validation error occured please try again");
+		return "notfound";
+	}
 	@RequestMapping(value="/register", method=RequestMethod.POST)
 	public String saveNewUser(@ModelAttribute("profile") Profile profile, String confirm,Model model) throws ParseException
 	{
-		String res=profileDaoService.saveProfile(profile, confirm)==true?"account created successfully":"account creation error please try again";
+		profile.setMail(profile.getMail().toLowerCase());
+		String res="";
+		boolean error=false;
+		if(profile.getPassword().length()<8)
+			{
+			res="password length is too short";
+			error=true;
+			}
+		if(!error)
+			res=profileDaoService.saveProfile(profile, confirm)==true?"account created successfully":"account creation error please try again";
 		model.addAttribute("message",res);
 		return "login";
 	}

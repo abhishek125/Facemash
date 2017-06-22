@@ -22,12 +22,12 @@ public class Profile {
 	@Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
 	private  String mail;
 	@NotNull
-	@Size(min=2,max=45)
-	@Pattern(regexp="/^[a-z ,.'-]+$/i")
+	@Size(min=1,max=45)
+	@Pattern(regexp="^[\\p{L}\\s.’\\-,]+$")
 	private  String firstname;
 	@NotNull
-	@Size(min=2,max=45)
-	@Pattern(regexp="/^[a-z ,.'-]+$/i")
+	@Size(min=1,max=45)
+	@Pattern(regexp="^[\\p{L}\\s.’\\-,]+$")
 	private  String lastname;
 	@NotNull
 	@Size(min=8, max=65)
