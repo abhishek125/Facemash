@@ -24,7 +24,12 @@
 
 <body>
 	<div class="container">
-
+<div class="alert alert-info" role="alert">${message}</div>
+<c:if test="${param.error != null}">
+    <div class="alert alert-info" id="error">
+       username or password was incorrect please try again 
+    </div>
+</c:if>
 		<div class="row" id="pwd-container">
 			<div class="col-md-4"></div>
 

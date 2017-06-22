@@ -33,15 +33,15 @@
      <legend>Sign Up</legend>
      <h4>It's free and always will be.</h4>
      <input type="text" name="firstname" value=""
-      class="form-control input-lg" placeholder="Your firstname" />
+      class="form-control input-lg" placeholder="Your firstname" data-toggle="tooltip" data-placement="top" title="dont use special symbols" />
      <input type="text" name="lastname" class="form-control input-lg"
-      placeholder="Your lastname" />
+      placeholder="Your lastname" data-toggle="tooltip" data-placement="top" title="dont use special symbools" />
      <input type="text" name="mail" class="form-control input-lg"
-      placeholder="Your Email" />
+      placeholder="Your Email" data-toggle="tooltip" data-placement="top" title="enter valid email"/>
      <input type="password" name="password" value=""
-      class="form-control input-lg" placeholder="Password" />
+      class="form-control input-lg" placeholder="Password" data-toggle="tooltip" data-placement="top" title="at least 8 characters"/>
      <input type="password" name="confirm" value=""
-      class="form-control input-lg" placeholder="Confirm Password" />
+      class="form-control input-lg" placeholder="Confirm Password" data-toggle="tooltip" data-placement="top" title="same as password" />
      <label>Birth Date</label>
      <input type="date" name="dob" value=""
       class="form-control input-lg" placeholder="mm/dd/yyyy" />

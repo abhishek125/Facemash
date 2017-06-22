@@ -917,7 +917,7 @@
              class="fa fa-camera" style="cursor: pointer;" id="chaticon"></i><input type="file" name="" id="chatimage" style="display:none;">
            </span> 
            <span style="display:inline;
-    float: right;"  class="uk-input-group-addon"><textarea placeholder="Type a message" height="50px"
+    float: right;height:50px"  class="uk-input-group-addon"><textarea placeholder="Type a message" 
             id="submit_message" name="submit_message" class="md-input"></textarea> <a href="#"><i
             class="glyphicon glyphicon-send" style="color:red;"></i></a>
           </span>

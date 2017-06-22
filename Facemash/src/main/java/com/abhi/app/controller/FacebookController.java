@@ -284,9 +284,10 @@ public class FacebookController {
 	}
 
 	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public String saveNewUser(@ModelAttribute("profile") Profile profile, String confirm) throws ParseException
+	public String saveNewUser(@ModelAttribute("profile") Profile profile, String confirm,Model model) throws ParseException
 	{
-		profileDaoService.saveProfile(profile, confirm);
+		String res=profileDaoService.saveProfile(profile, confirm)==true?"account created successfully":"account creation error please try again";
+		model.addAttribute("message",res);
 		return "login";
 	}
 	@RequestMapping(value="/profile/{id}", method=RequestMethod.GET)
