@@ -3,6 +3,10 @@ var header, token, action;
 var videosSelected=false;
 var imagesSelected=false;
 var messageReceiverId;
+function theFocus(obj) {
+	 $('[data-toggle="tooltip"]').tooltip(); 
+}
+
 function messaged(id){
 	$('#messageModal').modal('show');
 	messageReceiverId=id.substr(0,id.length-"message".length);
