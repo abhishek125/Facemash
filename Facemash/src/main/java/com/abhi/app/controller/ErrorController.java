@@ -1,14 +1,23 @@
 package com.abhi.app.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.ConstraintViolationException;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ErrorController {
+	@ExceptionHandler(ConstraintViolationException.class)
+	public String exception(Model model)
+	{
+		model.addAttribute("errorMsg","validation error occured please try again");
+		return "notfound";
+	}
 
     @RequestMapping(value = "errors", method = RequestMethod.GET)
     public ModelAndView renderErrorPage(HttpServletRequest httpRequest) {
