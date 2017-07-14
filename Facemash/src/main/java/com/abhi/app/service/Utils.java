@@ -75,7 +75,9 @@ public class Utils {
 	{
 		String listOfFileNames="";
 		try {
-            String filePath="c:\\uploads\\";
+			String filePath="c:/uploads/";
+            if(System.getenv("UPLOAD_LOCATION")!=null)
+            	filePath=System.getenv("UPLOAD_LOCATION").replace("\\", "/");
             for (int i=0;i<files.length;i++)
             {	String fileName=files[i].getOriginalFilename();
             	String random=nextUniqueId();
