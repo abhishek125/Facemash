@@ -1,6 +1,6 @@
 $(function() {
     $( "#skills" ).autocomplete({
-        source: '/Twitter/searchuser'
+        source: '/Facemash/searchuser'
     });
 });
 function inputFocus(i){
@@ -17,7 +17,7 @@ function inputFocus(i){
 	        delay: 500,
 	        //define callback to format results
 	        source: function (request, response) {
-	            $.getJSON("/Twitter/searchuser", request, function(result) {
+	            $.getJSON("/Facemash/searchuser", request, function(result) {
 	                response($.map(result, function(item) {
 	                    return {
 	                        // following property gets displayed in drop down
@@ -25,7 +25,7 @@ function inputFocus(i){
 	                        // following property gets entered in the textbox
 	                        value: item.firstname+" "+item.lastname,
 	                        // following property is added for our own use
-	                        tag_url: "/Twitter/"+"profile/"+item.userId
+	                        tag_url: "/Facemash/"+"profile/"+item.userId
 	                    }
 	                }));
 	            });

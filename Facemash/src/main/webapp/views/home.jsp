@@ -267,9 +267,9 @@
 										<li>
 											<a href="#"> Date of Birth : ${myVar}</a>
 										</li>
-										<c:if test="${!empty profile.work}">
+										<c:if test="${!empty profile.currentCity}">
 											<li>
-												<a href="#">Address : ${profile.homeTown}</a>
+												<a href="#">Address : ${profile.currentCity}</a>
 											</li>
 										</c:if>
 										<c:if test="${!empty profile.work}">
