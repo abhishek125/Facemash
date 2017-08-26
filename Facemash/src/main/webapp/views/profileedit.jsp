@@ -18,6 +18,7 @@
 <link href="${pageContext.request.contextPath}/resources/css/jquery-ui.min.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/resources/css/facebook.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/resources/css/main.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/chat.css" rel="stylesheet">
 <script>
 	var context = "${pageContext.request.contextPath}"
 </script>

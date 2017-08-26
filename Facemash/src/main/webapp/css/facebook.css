@@ -9,9 +9,6 @@ html, body {
    font-family:Arial,sans-serif;
    font-size:13px;
 }
-
-
-
 a:hover {
   text-decoration:none;
 }
@@ -58,11 +55,6 @@ hr {
     right: 0;
     top: 0;
     background-color:#444444;
-  /*
-    background-image:url('/assets/example/bg_suburb.jpg');
-    background-size:cover;
-    background-attachment:fixed;
-  */
 }
 
 .divider {
@@ -102,16 +94,6 @@ hr {
    width:200px;
 }
 
-
-/* #sidebar, #sidebar a, #sidebar-footer a {
-    color: #1d2129;
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: transparent;
-    padding-left: 5px;
-    size: 12px;
-    line-height: 28px;
-    font-weight: normal;
-    } */
 #sidebar .nav li>a:hover {
     background-color:#393939;
 }
@@ -190,14 +172,6 @@ h1,h2,h3 {
 .label-default {
   background-color:#dddddd;
 }
-.page-header {
-  margin-top: 55px;
-  padding-top: 9px;
-  border-top:1px solid #eeeeee;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:2px;
-}
 
 .panel-default .panel-heading {
   background-color:#f9fafb;
@@ -245,12 +219,6 @@ small.text-muted {
 	padding-top:20px;
   }
 
-  /* .navbar-blue {
-	background-color:#000000;
-    top:0;
-    width:100%;
-    position:relative;
-  } */
 
 }
 
@@ -260,24 +228,6 @@ small.text-muted {
  * --------------------------------------------------
  */
 @media screen and (max-width: 768px) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all 0.25s ease-out;
-    -moz-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;
-  }
-
-  .row-offcanvas-left.active {
-    left: 33%;
-  }
-
-  .row-offcanvas-left.active .sidebar-offcanvas {
-    left: -33%;
-    position: absolute;
-    top: 0;
-    width: 33%;
-    margin-left: 5px;
-  }
 
   #sidebar, #sidebar a, #sidebar-footer a {
     padding-left:3px;

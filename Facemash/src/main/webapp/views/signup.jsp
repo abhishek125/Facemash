@@ -22,8 +22,8 @@
 <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/searchbox.js"></script>
 </head>
-<body>
-	<div id="wrap">
+<body id="wrap">
+	<div >
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<form action="${pageContext.request.contextPath}/register" method="post" accept-charset="utf-8" class="form" role="form">
@@ -46,9 +46,9 @@
 						Female
 					</label>
 					<br />
-					<span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
+					<span class="">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
 					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-					<button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">Create my account</button>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">Create my account</button>
 				</form>
 			</div>
 		</div>

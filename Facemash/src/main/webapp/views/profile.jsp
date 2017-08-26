@@ -18,6 +18,7 @@
 <link href="${pageContext.request.contextPath}/resources/css/jquery-ui.min.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/resources/css/facebook.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/resources/css/main.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/chat.css" rel="stylesheet">
 <script>
 	var context = "${pageContext.request.contextPath}"
 </script>
@@ -270,7 +271,7 @@
 								<div class="col col_4 iamgurdeep-pic">
 									<img class="img-responsive myimage" alt="myimage" src="${profile.profilePic}">
 									<div class="username">
-										<h2>${profile.firstname}${profile.lastname}</h2>
+										<h2>${profile.firstname} ${profile.lastname}</h2>
 										<!-- <a href="https://web.facebook.com/myimage" target="_blank"
            class=""> <i class="fa fa-user-plus"></i> Add Friend
           </a> -->
