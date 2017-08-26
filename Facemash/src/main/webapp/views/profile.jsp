@@ -515,7 +515,8 @@
 						</c:forEach>
 						<c:forEach var="entry" items="${myCommentGroup}">
 							<c:set var="listOfCommentActivities" value="${entry.value}"></c:set>
-							<c:set var="activity" value="${listOfCommentActivities[0]}"></c:set>
+							<c:forEach var="activity" items="${listOfCommentActivities}">
+							<%-- <c:set var="activity" value="${listOfCommentActivities[0]}"></c:set> --%>
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<span class="pull-right"> ${activity.date} </span>
@@ -658,6 +659,7 @@
 									</div>
 								</div>
 							</div>
+							</c:forEach>
 						</c:forEach>
 						<div style="text-align: center;">
 							<strong>no more feeds from this user</strong>

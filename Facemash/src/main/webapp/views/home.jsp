@@ -500,7 +500,8 @@
 							<!-- this section is only for comment activities -->
 							<c:forEach var="entry" items="${friendCommentGroup}">
 								<c:set var="listOfCommentActivities" value="${entry.value}"></c:set>
-								<c:set var="activity" value="${listOfCommentActivities[0]}"></c:set>
+								<c:forEach var="activity" items="${listOfCommentActivities}">
+								<%-- <c:set var="activity" value="${listOfCommentActivities[0]}"></c:set> --%>
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<span class="pull-right"> ${activity.date} </span>
@@ -644,6 +645,7 @@
 										</div>
 									</div>
 								</div>
+								</c:forEach>
 							</c:forEach>
 							<!--end of section only for comment activities -->
 							<div style="text-align: center;">
