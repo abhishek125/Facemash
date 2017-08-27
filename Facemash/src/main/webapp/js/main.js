@@ -202,7 +202,7 @@ $(document).ready(function(){
     var theid   = dataset.attr("id");
     var empty	= dataset.hasClass('empty')
     var newid   = theid+"-form";
-    var currval = dataset.text();
+    var currval = dataset.text().trim();
     if(empty)
     	currval="";
     var type;
@@ -234,6 +234,7 @@ $(document).ready(function(){
     }
     else{
     	$('<input type="text" name="'+newid+'" id="'+newid+'" value="'+currval+'" class="hlite">').insertAfter(dataset);
+    	console.log("h "+currval+" no");
     }
     
  

@@ -394,11 +394,11 @@
 								<label>highschool:</label>
 								<span id="highSchool" class="datainfo ${name}">
 									<c:if test="${empty profile.highSchool}">
-    where you studied at highschool?
-</c:if>
+    									where you studied at highschool?
+									</c:if>
 									<c:if test="${not empty profile.highSchool}">
-    ${profile.highSchool}
-</c:if>
+    										${profile.highSchool}
+									</c:if>
 								</span>
 								<a href="#" class="editlink">Edit Info</a>
 								<a class="savebtn">Save</a>
@@ -414,11 +414,11 @@
 								<label>college:</label>
 								<span id="college" class="datainfo ${name}">
 									<c:if test="${empty profile.college}">
-    where is your college?
-</c:if>
+    									where is your college?
+									</c:if>
 									<c:if test="${not empty profile.college}">
-    ${profile.college}
-</c:if>
+    									${profile.college}
+									</c:if>
 								</span>
 								<a href="#" class="editlink">Edit Info</a>
 								<a class="savebtn">Save</a>
@@ -434,11 +434,11 @@
 								<label>work:</label>
 								<span id="work" class="datainfo ${name}">
 									<c:if test="${empty profile.work}">
-    where do you work?
-</c:if>
+    										where do you work?
+									</c:if>
 									<c:if test="${not empty profile.work}">
-    ${profile.work}
-</c:if>
+    									${profile.work}
+									</c:if>
 								</span>
 								<a href="#" class="editlink">Edit Info</a>
 								<a class="savebtn">Save</a>
@@ -454,11 +454,11 @@
 								<label>about:</label>
 								<span id="about" class="datainfo ${name}">
 									<c:if test="${empty profile.about}">
-    write something about yourself.
-</c:if>
+    										write something about yourself.
+									</c:if>
 									<c:if test="${not empty profile.about}">
-    ${profile.about}
-</c:if>
+    										${profile.about}
+									</c:if>
 								</span>
 								<a href="#" class="editlink">Edit Info</a>
 								<a class="savebtn">Save</a>
@@ -474,11 +474,11 @@
 								<label>quote:</label>
 								<span id="quote" class="datainfo ${name}">
 									<c:if test="${empty profile.quote}">
-    what is your favourite quote?
-</c:if>
+    										what is your favourite quote?
+									</c:if>
 									<c:if test="${not empty profile.quote}">
-    ${profile.quote}
-</c:if>
+    									${profile.quote}
+									</c:if>
 								</span>
 								<a href="#" class="editlink">Edit Info</a>
 								<a class="savebtn">Save</a>
@@ -494,11 +494,11 @@
 								<label>interest:</label>
 								<span id="interest" class="datainfo ${name}">
 									<c:if test="${empty profile.interest}">
-    what is your interest?
-</c:if>
+    									what is your interest?	
+									</c:if>
 									<c:if test="${not empty profile.interest}">
-    ${profile.interest}
-</c:if>
+    									${profile.interest}
+									</c:if>
 								</span>
 								<a href="#" class="editlink">Edit Info</a>
 								<a class="savebtn">Save</a>
@@ -514,11 +514,11 @@
 								<label>religious:</label>
 								<span id="religious" class="datainfo ${name}">
 									<c:if test="${empty profile.religious}">
-    what is your religious view?
-</c:if>
+    									what is your religious view?
+									</c:if>
 									<c:if test="${not empty profile.religious}">
-    ${profile.religious}
-</c:if>
+    										${profile.religious}
+									</c:if>
 								</span>
 								<a href="#" class="editlink">Edit Info</a>
 								<a class="savebtn">Save</a>
@@ -534,11 +534,11 @@
 								<label>phone:</label>
 								<span id="phone" class="datainfo ${name}">
 									<c:if test="${empty profile.phone}">
-    what is your phone number?
-</c:if>
+    										what is your phone number?
+									</c:if>
 									<c:if test="${not empty profile.phone}">
-    ${profile.phone}
-</c:if>
+    									${profile.phone}
+									</c:if>
 								</span>
 								<a href="#" class="editlink">Edit Info</a>
 								<a class="savebtn">Save</a>
@@ -554,11 +554,11 @@
 								<label>currentcity:</label>
 								<span id="currentCity" class="datainfo ${name}">
 									<c:if test="${empty profile.currentCity}">
-    where do you live?
-</c:if>
+    													where do you live?
+									</c:if>
 									<c:if test="${not empty profile.currentCity}">
-    ${profile.currentCity}
-</c:if>
+    									${profile.currentCity}
+									</c:if>
 								</span>
 								<a href="#" class="editlink">Edit Info</a>
 								<a class="savebtn">Save</a>
@@ -574,11 +574,11 @@
 								<label>hometown:</label>
 								<span id="homeTown" class="datainfo ${name}">
 									<c:if test="${empty profile.homeTown}">
-    where is your hometown?
-</c:if>
+    									where is your hometown?
+									</c:if>
 									<c:if test="${not empty profile.homeTown}">
-    ${profile.homeTown}
-</c:if>
+    									${profile.homeTown}
+									</c:if>
 								</span>
 								<a href="#" class="editlink">Edit Info</a>
 								<a class="savebtn">Save</a>
@@ -594,11 +594,11 @@
 								<label>relationstatus:</label>
 								<span id="relationStatus" class="datainfo ${name}">
 									<c:if test="${empty profile.relationStatus}">
-    what is your relation status?
-</c:if>
+    										what is your relation status?
+									</c:if>
 									<c:if test="${not empty profile.relationStatus}">
-    ${profile.relationStatus}
-</c:if>
+    											${profile.relationStatus}
+									</c:if>
 								</span>
 								<a href="#" class="editlink">Edit Info</a>
 								<a class="savebtn">Save</a>
