@@ -18,7 +18,7 @@ http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 	<context:component-scan base-package="com.abhi.app" />
 	<mvc:annotation-driven />
 	<mvc:resources mapping="/resources/**" location="/" />
-	<!-- <mvc:resources mapping="/uploads/**" location="c:\\uploads\\" /> -->
+	<mvc:resources mapping="/uploads/**" location="${UPLOAD_LOCATION}" />
 	
 	
 	<bean id="viewResolver"
