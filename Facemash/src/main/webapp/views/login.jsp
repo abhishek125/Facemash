@@ -15,7 +15,7 @@
 <link href="${pageContext.request.contextPath}/resources/css/facebook.css" rel="stylesheet" />
 <link href="${pageContext.request.contextPath}/resources/css/main.css" rel="stylesheet" />
 </head>
-<body>
+<body id="wrap">
 	<div class="container">
 		<c:if test="${message != null}">
 			<div class="alert alert-info" role="alert">${message}</div>

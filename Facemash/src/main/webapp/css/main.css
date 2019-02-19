@@ -96,7 +96,8 @@
 }
 
 #wrap {
-	background-image: url("../images/network-background.jpg");
+	background-repeat: no-repeat;
+    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
 	color:white;
 }
 

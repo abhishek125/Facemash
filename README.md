@@ -33,4 +33,4 @@ we would not store user uploaded files inside the webapp(why? http://bit.ly/2sLf
 http://bit.ly/2giN7TL
 
 ## demo
-http://ec2-54-186-93-35.us-west-2.compute.amazonaws.com:8080/Facemash/
+http://ec2-54-187-58-32.us-west-2.compute.amazonaws.com:8080/Facemash/
