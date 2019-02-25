@@ -9,7 +9,7 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/fb" />
+		<property name="url" value="jdbc:mysql://localhost:3306/fb?autoReconnect=true" />
 		<property name="username" value="root" /><!--change "root" to your username of mysql  -->
 		<property name="password" value="1234" /><!--change "123" to your password of mysql  -->
 	</bean>
